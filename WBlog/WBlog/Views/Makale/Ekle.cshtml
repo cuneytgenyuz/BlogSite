@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "Makale Ekle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model WBlog.Models.Kategori
+
+<form action="/Makale/Ekle" method="post" enctype="multipart/form-data">
+    <table>
+        
+            <tr>
+                <td>Başlık :</td>
+                <td> <input class="form-control" type="text" name="baslik" value="" placeholder="Makale başlığı giriniz." /> </td>
+            </tr>
+        
+        <tr>
+            <td>İçerik :</td>
+            <td> <input class="form-control" type="text" name="icerik" value="" placeholder="Makale içeriği giriniz." /> </td>
+        </tr>
+        <tr>
+            <td>Kategori :</td>
+            <td>
+                <select name="kategoriID">
+                    @foreach (var item in ViewBag.Kategoriler)
+                    {
+                        <option value="@item.id">@item.adi</option>
+                    }
+                    
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Resim :</td>
+            <td> <input type="file" name="resim" value="" placeholder="Resim seçiniz."/> </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td> <input type="submit" name="name" value="Ekle" /> </td>
+        </tr>
+    </table>
+</form>
+

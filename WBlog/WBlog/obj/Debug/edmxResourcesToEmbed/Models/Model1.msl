@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WBlogModelStoreContainer" CdmEntityContainer="WBlogEntities">
+    <EntitySetMapping Name="Etiket">
+      <EntityTypeMapping TypeName="WBlogModel.Etiket">
+        <MappingFragment StoreEntitySet="Etiket">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="adi" ColumnName="adi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kategori">
+      <EntityTypeMapping TypeName="WBlogModel.Kategori">
+        <MappingFragment StoreEntitySet="Kategori">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="adi" ColumnName="adi" />
+          <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kullanici">
+      <EntityTypeMapping TypeName="WBlogModel.Kullanici">
+        <MappingFragment StoreEntitySet="Kullanici">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="adi" ColumnName="adi" />
+          <ScalarProperty Name="soyadi" ColumnName="soyadi" />
+          <ScalarProperty Name="kullaniciAdi" ColumnName="kullaniciAdi" />
+          <ScalarProperty Name="parola" ColumnName="parola" />
+          <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+          <ScalarProperty Name="mailAdres" ColumnName="mailAdres" />
+          <ScalarProperty Name="cinsiyet" ColumnName="cinsiyet" />
+          <ScalarProperty Name="dogumTarihi" ColumnName="dogumTarihi" />
+          <ScalarProperty Name="kayitTarihi" ColumnName="kayitTarihi" />
+          <ScalarProperty Name="resimID" ColumnName="resimID" />
+          <ScalarProperty Name="yazar" ColumnName="yazar" />
+          <ScalarProperty Name="onaylandi" ColumnName="onaylandi" />
+          <ScalarProperty Name="aktif" ColumnName="aktif" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KullaniciRol">
+      <EntityTypeMapping TypeName="WBlogModel.KullaniciRol">
+        <MappingFragment StoreEntitySet="KullaniciRol">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="rolID" ColumnName="rolID" />
+          <ScalarProperty Name="kullaniciID" ColumnName="kullaniciID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Makale">
+      <EntityTypeMapping TypeName="WBlogModel.Makale">
+        <MappingFragment StoreEntitySet="Makale">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="baslik" ColumnName="baslik" />
+          <ScalarProperty Name="icerik" ColumnName="icerik" />
+          <ScalarProperty Name="eklenmeTarihi" ColumnName="eklenmeTarihi" />
+          <ScalarProperty Name="goruntulenmeSayisi" ColumnName="goruntulenmeSayisi" />
+          <ScalarProperty Name="begeni" ColumnName="begeni" />
+          <ScalarProperty Name="kategoriID" ColumnName="kategoriID" />
+          <ScalarProperty Name="yazarID" ColumnName="yazarID" />
+          <ScalarProperty Name="resimID" ColumnName="resimID" />
+          <ScalarProperty Name="etiketID" ColumnName="etiketID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Resim">
+      <EntityTypeMapping TypeName="WBlogModel.Resim">
+        <MappingFragment StoreEntitySet="Resim">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="kucukBoyut" ColumnName="kucukBoyut" />
+          <ScalarProperty Name="ortaBoyut" ColumnName="ortaBoyut" />
+          <ScalarProperty Name="buyukBoyut" ColumnName="buyukBoyut" />
+          <ScalarProperty Name="video" ColumnName="video" />
+          <ScalarProperty Name="makaleID" ColumnName="makaleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rol">
+      <EntityTypeMapping TypeName="WBlogModel.Rol">
+        <MappingFragment StoreEntitySet="Rol">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="adi" ColumnName="adi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="WBlogModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Yorum">
+      <EntityTypeMapping TypeName="WBlogModel.Yorum">
+        <MappingFragment StoreEntitySet="Yorum">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="yorum1" ColumnName="yorum" />
+          <ScalarProperty Name="eklenmeTarihi" ColumnName="eklenmeTarihi" />
+          <ScalarProperty Name="adSoyad" ColumnName="adSoyad" />
+          <ScalarProperty Name="begeni" ColumnName="begeni" />
+          <ScalarProperty Name="makaleID" ColumnName="makaleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="MakaleEtiket" TypeName="WBlogModel.MakaleEtiket" StoreEntitySet="MakaleEtiket">
+      <EndProperty Name="Etiket">
+        <ScalarProperty Name="id" ColumnName="etiketID" />
+      </EndProperty>
+      <EndProperty Name="Makale">
+        <ScalarProperty Name="id" ColumnName="makaleID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="YazarTakip" TypeName="WBlogModel.YazarTakip" StoreEntitySet="YazarTakip">
+      <EndProperty Name="Kullanici">
+        <ScalarProperty Name="id" ColumnName="yazarID" />
+      </EndProperty>
+      <EndProperty Name="Kullanici1">
+        <ScalarProperty Name="id" ColumnName="kullaniciID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

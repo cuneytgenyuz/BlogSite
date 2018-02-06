@@ -1,0 +1,12 @@
+﻿@model IEnumerable<WBlog.Models.Kategori>
+
+<div class="sidebox widget">
+    <h3 class="widget-title section-title">Kategoriler</h3>
+    <ul class="circled">
+        @foreach (WBlog.Models.Kategori kategori in Model)
+        {
+            <li><a href="/Kategori/Index/@kategori.id">@kategori.adi (@kategori.Makale.Count)</a></li>
+        }
+
+    </ul>
+</div>

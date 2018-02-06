@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "Yazar Ol";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form action="/Yazar/YazarOl" method="post">
+    <table>
+        <tr>
+            <td><label>Adı :</label></td>
+            <td> <input type="text" name="adi" value="" /> </td>
+        </tr>
+        <tr>
+            <td><label>Soyadı :</label></td>
+            <td> <input type="text" name="soyadi" value="" /> </td>
+        </tr>
+        <tr>
+            <td><label>Kullanıcı Adı :</label></td>
+            <td> <input type="text" name="kullaniciAdi" value="" /> </td>
+        </tr>
+        <tr>
+            <td><label>Parola :</label></td>
+            <td> <input type="password" name="parola" value="" /> </td>
+        </tr>
+        <tr>
+            <td><label>E-Mail :</label></td>
+            <td> <input type="text" name="mailAdres" value="" /> </td>
+        </tr>
+        <tr>
+            <th>Cinsiyet :
+
+            <td>
+                <label>Erkek<input type="radio" name="rdBay" value="" /></label>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label>
+                    Kadın <input type="radio" name="rdBayan" value="" />
+                </label>
+            </td>
+            </th>
+        </tr>
+        <tr>
+            <td><label>Doğum Tarihi :</label></td>
+            <td> <input type="date" name="dogumTarihi" value="" /> </td>
+        </tr>
+        <tr>
+            <td><label>Özgeçmiş :</label></td>
+            <td> <input type="text" name="aciklama" value="" /> </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td> <input type="submit" name="name" value="Üye Ol" /> </td>
+        </tr>
+    </table>
+</form>
+

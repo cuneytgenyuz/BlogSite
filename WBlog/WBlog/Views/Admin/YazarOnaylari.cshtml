@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Yazar Onaylari";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model IEnumerable<WBlog.Models.Kullanici>
+
+<table>
+
+    @foreach (WBlog.Models.Kullanici kullanici in Model)
+    {
+        <tr>
+            <td>@kullanici.adi @kullanici.soyadi</td>
+            <td><a href="/Admin/OnayVer/@kullanici.id">Onay Ver</a> </td>
+        </tr>
+    }
+
+</table>
+

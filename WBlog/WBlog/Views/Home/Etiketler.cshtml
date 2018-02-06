@@ -1,0 +1,13 @@
+﻿@model IEnumerable<WBlog.Models.Etiket>
+
+<div class="widget">
+    <h4 class="widget-title">Etiketler</h4>
+    <ul class="tag-list">
+        @foreach (WBlog.Models.Etiket etiket in Model)
+        {
+            <li><a href="/Home/Etiketler">@etiket.adi</a></li>
+        }
+
+    </ul>
+    <!-- /.tag-list -->
+</div>
